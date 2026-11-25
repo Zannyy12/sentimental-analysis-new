@@ -1,0 +1,29 @@
+{
+  "logistic": {
+    "accuracy": 0.8964,
+    "precision": 0.8996,
+    "precision_macro": 0.8987,
+    "recall": 0.8964,
+    "recall_macro": 0.8946,
+    "f1_score": 0.8969,
+    "f1_macro": 0.8955
+  },
+  "naive_bayes": {
+    "accuracy": 0.773,
+    "precision": 0.786,
+    "precision_macro": 0.7797,
+    "recall": 0.773,
+    "recall_macro": 0.7789,
+    "f1_score": 0.7686,
+    "f1_macro": 0.7683
+  },
+  "random_forest": {
+    "accuracy": 0.8817,
+    "precision": 0.8858,
+    "precision_macro": 0.8847,
+    "recall": 0.8817,
+    "recall_macro": 0.8809,
+    "f1_score": 0.8824,
+    "f1_macro": 0.8815
+  }
+}

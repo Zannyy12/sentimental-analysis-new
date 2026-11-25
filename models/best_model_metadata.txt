@@ -1,0 +1,4 @@
+model_name: Random Forest
+feature_type: TF-IDF
+accuracy: 0.8527
+f1_score: 0.8524

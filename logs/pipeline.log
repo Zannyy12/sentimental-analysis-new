@@ -1,0 +1,288 @@
+2026-05-20 20:45:23 | INFO     | scripts.clean_data        | Downloading NLTK resource: punkt
+2026-05-20 20:45:31 | INFO     | scripts.clean_data        | Downloading NLTK resource: punkt_tab
+2026-05-20 20:45:33 | INFO     | scripts.clean_data        | Downloading NLTK resource: stopwords
+2026-05-20 20:45:34 | INFO     | scripts.clean_data        | Downloading NLTK resource: wordnet
+2026-05-20 20:45:39 | INFO     | scripts.clean_data        | Downloading NLTK resource: omw-1.4
+2026-05-20 20:47:35 | INFO     | scripts.clean_data        | Downloading NLTK resource: wordnet
+2026-05-20 20:47:35 | INFO     | scripts.clean_data        | Downloading NLTK resource: omw-1.4
+2026-05-20 20:47:36 | WARNING  | scripts.eda               | wordcloud package not installed — word clouds will be skipped
+2026-05-20 20:47:37 | INFO     | main_pipeline             | ================================================================================
+2026-05-20 20:47:37 | INFO     | main_pipeline             | 🚀 TELECOM SENTIMENT ANALYSIS SYSTEM PIPELINE INITIATED
+2026-05-20 20:47:37 | INFO     | main_pipeline             | ================================================================================
+2026-05-20 20:47:37 | INFO     | main_pipeline             | 
+▶ STARTING: Phase 1: Dataset Extraction
+2026-05-20 20:47:37 | INFO     | main_pipeline             | --------------------------------------------------
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | ======================================================================
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | PHASE 1 — Dataset Extraction Started
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | ======================================================================
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | Found 5 ZIP file(s) in 'E:\University\6th semester\Introduction to datasceince\ids project'
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   → jazzcash_reviews (3).zip  (346.1 KB)
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   → Telenor_reviews (1).zip  (226.5 KB)
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   → Telenor_reviews.zip  (304.8 KB)
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   → Ufone_reviews (7).zip  (345.1 KB)
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   → Zong_reviews.zip  (216.7 KB)
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | Extracting: jazzcash_reviews (3).zip
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   Extracted 176 file(s), skipped 0
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | Extracting: Telenor_reviews (1).zip
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      |   Extracted 153 file(s), skipped 0
+2026-05-20 20:47:37 | INFO     | scripts.extract_data      | Extracting: Telenor_reviews.zip
+2026-05-20 20:47:38 | INFO     | scripts.extract_data      |   Extracted 153 file(s), skipped 0
+2026-05-20 20:47:38 | INFO     | scripts.extract_data      | Extracting: Ufone_reviews (7).zip
+2026-05-20 20:47:38 | INFO     | scripts.extract_data      |   Extracted 176 file(s), skipped 0
+2026-05-20 20:47:38 | INFO     | scripts.extract_data      | Extracting: Zong_reviews.zip
+2026-05-20 20:47:38 | INFO     | scripts.extract_data      |   Extracted 278 file(s), skipped 0
+2026-05-20 20:47:38 | INFO     | scripts.extract_data      | Total TXT files extracted: 936
+2026-05-20 20:47:46 | INFO     | scripts.extract_data      | Total raw reviews collected: 16561
+2026-05-20 20:47:47 | INFO     | scripts.extract_data      | Raw reviews saved → E:\University\6th semester\Introduction to datasceince\ids project\extracted_files\raw_reviews.csv
+2026-05-20 20:47:47 | INFO     | scripts.extract_data      | DataFrame shape: (16561, 3)
+2026-05-20 20:47:47 | INFO     | scripts.extract_data      | PHASE 1 — Extraction Complete ✓
+2026-05-20 20:47:47 | INFO     | main_pipeline             | ✔ COMPLETED: Phase 1: Dataset Extraction (in 9.77 seconds)
+2026-05-20 20:47:47 | INFO     | main_pipeline             | 
+▶ STARTING: Phase 2: Data Preprocessing & Cleaning
+2026-05-20 20:47:47 | INFO     | main_pipeline             | --------------------------------------------------
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | ======================================================================
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | PHASE 2 — Data Preprocessing & Cleaning Started
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | ======================================================================
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | Loaded 16561 raw reviews
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | After removing nulls/empty: 16561 reviews
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | Removed 8084 duplicate reviews
+2026-05-20 20:47:47 | INFO     | scripts.clean_data        | Applying text cleaning pipeline …
+2026-05-20 20:47:53 | INFO     | scripts.clean_data        | Dropped 776 reviews (too short after cleaning)
+2026-05-20 20:47:54 | INFO     | scripts.clean_data        | Cleaned reviews saved → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_data\cleaned_reviews.csv
+2026-05-20 20:47:54 | INFO     | scripts.clean_data        | Cleaned reviews saved to root → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_reviews.csv
+2026-05-20 20:47:54 | INFO     | scripts.clean_data        | Final dataset: 7701 reviews (removed 8860 total)
+2026-05-20 20:47:54 | INFO     | scripts.clean_data        | PHASE 2 — Preprocessing & Cleaning Complete ✓
+2026-05-20 20:47:54 | INFO     | main_pipeline             | ✔ COMPLETED: Phase 2: Data Preprocessing & Cleaning (in 6.93 seconds)
+2026-05-20 20:47:54 | INFO     | main_pipeline             | 
+▶ STARTING: Phase 3: Label Ingestion & Excel Conversion
+2026-05-20 20:47:54 | INFO     | main_pipeline             | --------------------------------------------------
+2026-05-20 20:47:54 | INFO     | scripts.convert_to_excel  | ======================================================================
+2026-05-20 20:47:54 | INFO     | scripts.convert_to_excel  | PHASE 3 — Convert to Excel / CSV with Sentiment Labels
+2026-05-20 20:47:54 | INFO     | scripts.convert_to_excel  | ======================================================================
+2026-05-20 20:47:54 | INFO     | scripts.convert_to_excel  | Loaded cleaned reviews: 7701 rows
+2026-05-20 20:47:54 | INFO     | scripts.convert_to_excel  | Applying VADER sentiment labeling …
+2026-05-20 20:48:03 | INFO     | scripts.convert_to_excel  | CSV saved → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_data\telecom_reviews.csv and E:\University\6th semester\Introduction to datasceince\ids project\telecom_reviews.csv
+2026-05-20 20:48:09 | INFO     | scripts.convert_to_excel  | XLSX saved → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_data\telecom_reviews.xlsx and E:\University\6th semester\Introduction to datasceince\ids project\telecom_reviews.xlsx
+2026-05-20 20:48:09 | INFO     | scripts.convert_to_excel  | Sentiment Distribution:
+2026-05-20 20:48:09 | INFO     | scripts.convert_to_excel  |     Positive:   4075  (52.9%)
+2026-05-20 20:48:09 | INFO     | scripts.convert_to_excel  |     Negative:   2060  (26.7%)
+2026-05-20 20:48:09 | INFO     | scripts.convert_to_excel  |      Neutral:   1566  (20.3%)
+2026-05-20 20:48:09 | INFO     | scripts.convert_to_excel  | PHASE 3 — Conversion Complete ✓
+2026-05-20 20:48:09 | INFO     | main_pipeline             | ✔ COMPLETED: Phase 3: Label Ingestion & Excel Conversion (in 15.85 seconds)
+2026-05-20 20:48:09 | INFO     | main_pipeline             | 
+▶ STARTING: Phase 4: Exploratory Data Analysis (EDA)
+2026-05-20 20:48:09 | INFO     | main_pipeline             | --------------------------------------------------
+2026-05-20 20:48:09 | INFO     | scripts.eda               | ======================================================================
+2026-05-20 20:48:09 | INFO     | scripts.eda               | PHASE 4 — Exploratory Data Analysis Started
+2026-05-20 20:48:09 | INFO     | scripts.eda               | ======================================================================
+2026-05-20 20:48:10 | INFO     | scripts.eda               | Loaded 7701 labeled reviews
+2026-05-20 20:48:10 | INFO     | scripts.eda               | Dataset shape: (7701, 6)
+2026-05-20 20:48:10 | INFO     | scripts.eda               | Columns: ['Review', 'Sentiment', 'Cleaned_Review', 'Confidence', 'Source_File', 'Source_Zip']
+2026-05-20 20:48:10 | INFO     | scripts.eda               | Sentiment classes: ['Neutral', 'Negative', 'Positive']
+2026-05-20 20:48:10 | INFO     | scripts.eda               | Missing values:
+Review            0
+Sentiment         0
+Cleaned_Review    0
+Confidence        0
+Source_File       0
+Source_Zip        0
+2026-05-20 20:48:10 | INFO     | scripts.eda               | Generating charts …
+2026-05-20 20:48:10 | INFO     | scripts.eda               |   Chart saved → sentiment_distribution.png
+2026-05-20 20:48:10 | INFO     | scripts.eda               |   Chart saved → sentiment_pie_chart.png
+2026-05-20 20:48:11 | INFO     | scripts.eda               |   Chart saved → word_frequency_top30.png
+2026-05-20 20:48:11 | INFO     | scripts.eda               |   Chart saved → review_length_distribution.png
+2026-05-20 20:48:12 | INFO     | scripts.eda               |   Chart saved → review_length_by_sentiment.png
+2026-05-20 20:48:12 | INFO     | scripts.eda               |   Chart saved → missing_values_analysis.png
+2026-05-20 20:48:13 | INFO     | scripts.eda               |   Chart saved → bigram_frequency.png
+2026-05-20 20:48:13 | INFO     | scripts.eda               | All charts saved to → E:\University\6th semester\Introduction to datasceince\ids project\charts
+2026-05-20 20:48:13 | INFO     | scripts.eda               | PHASE 4 — EDA Complete ✓
+2026-05-20 20:48:13 | INFO     | main_pipeline             | ✔ COMPLETED: Phase 4: Exploratory Data Analysis (EDA) (in 3.05 seconds)
+2026-05-20 20:48:13 | INFO     | main_pipeline             | 
+▶ STARTING: Phase 5 & 6: Model Training & Evaluation
+2026-05-20 20:48:13 | INFO     | main_pipeline             | --------------------------------------------------
+2026-05-20 20:48:13 | INFO     | scripts.train_models      | ======================================================================
+2026-05-20 20:48:13 | INFO     | scripts.train_models      | PHASE 6 — Model Training & Evaluation Started
+2026-05-20 20:48:13 | INFO     | scripts.train_models      | ======================================================================
+2026-05-20 20:48:13 | INFO     | scripts.feature_engineering | ======================================================================
+2026-05-20 20:48:13 | INFO     | scripts.feature_engineering | PHASE 5 — Feature Engineering Started
+2026-05-20 20:48:13 | INFO     | scripts.feature_engineering | ======================================================================
+2026-05-20 20:48:13 | INFO     | scripts.feature_engineering | Label classes: ['Negative', 'Neutral', 'Positive']
+2026-05-20 20:48:13 | INFO     | scripts.feature_engineering | TF-IDF: 7701 x 5000
+2026-05-20 20:48:14 | INFO     | scripts.feature_engineering | BoW: 7701 x 5000
+2026-05-20 20:48:14 | INFO     | scripts.feature_engineering | Train: 6160, Test: 1541
+2026-05-20 20:48:14 | INFO     | scripts.feature_engineering | PHASE 5 — Feature Engineering Complete ✓
+2026-05-20 20:48:14 | INFO     | scripts.train_models      | Training Logistic Regression using TF-IDF features...
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   Accuracy : 0.8397
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   Precision: 0.8393
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   Recall   : 0.8397
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   F1-Score : 0.8385
+2026-05-20 20:48:14 | INFO     | scripts.train_models      | Training Naive Bayes using TF-IDF features...
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   Accuracy : 0.7378
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   Precision: 0.7300
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   Recall   : 0.7378
+2026-05-20 20:48:14 | INFO     | scripts.train_models      |   F1-Score : 0.7219
+2026-05-20 20:48:14 | INFO     | scripts.train_models      | Training Random Forest using TF-IDF features...
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Accuracy : 0.8527
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Precision: 0.8544
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Recall   : 0.8527
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   F1-Score : 0.8524
+2026-05-20 20:48:26 | INFO     | scripts.train_models      | Training Logistic Regression using BoW features...
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Accuracy : 0.8514
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Precision: 0.8534
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Recall   : 0.8514
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   F1-Score : 0.8505
+2026-05-20 20:48:26 | INFO     | scripts.train_models      | Training Naive Bayes using BoW features...
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Accuracy : 0.7599
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Precision: 0.7542
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   Recall   : 0.7599
+2026-05-20 20:48:26 | INFO     | scripts.train_models      |   F1-Score : 0.7548
+2026-05-20 20:48:26 | INFO     | scripts.train_models      | Training Random Forest using BoW features...
+2026-05-20 20:48:39 | INFO     | scripts.train_models      |   Accuracy : 0.8514
+2026-05-20 20:48:39 | INFO     | scripts.train_models      |   Precision: 0.8584
+2026-05-20 20:48:39 | INFO     | scripts.train_models      |   Recall   : 0.8514
+2026-05-20 20:48:39 | INFO     | scripts.train_models      |   F1-Score : 0.8516
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | 
+=================================================================
+2026-05-20 20:48:39 | INFO     | scripts.train_models      |                ALGORITHM COMPARISON TABLE
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | =================================================================
+2026-05-20 20:48:39 | INFO     | scripts.train_models      |          model_name feature_type  accuracy  precision   recall  f1_score
+Logistic Regression       TF-IDF  0.839714   0.839327 0.839714  0.838505
+        Naive Bayes       TF-IDF  0.737833   0.729957 0.737833  0.721936
+      Random Forest       TF-IDF  0.852693   0.854415 0.852693  0.852373
+Logistic Regression          BoW  0.851395   0.853410 0.851395  0.850511
+        Naive Bayes          BoW  0.759896   0.754245 0.759896  0.754849
+      Random Forest          BoW  0.851395   0.858381 0.851395  0.851560
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | =================================================================
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | Saved Logistic Regression (TF-IDF) → logistic_regression_tf-idf.pkl
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | Saved Naive Bayes (TF-IDF) → naive_bayes_tf-idf.pkl
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | Saved Random Forest (TF-IDF) → random_forest_tf-idf.pkl
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | Saved Logistic Regression (BoW) → logistic_regression_bow.pkl
+2026-05-20 20:48:39 | INFO     | scripts.train_models      | Saved Naive Bayes (BoW) → naive_bayes_bow.pkl
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | Saved Random Forest (BoW) → random_forest_bow.pkl
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | 
+==================================================
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | 🏆 OVERALL BEST PERFORMING MODEL: Random Forest (TF-IDF)
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | Accuracy : 0.8527
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | F1-Score : 0.8524
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | Saved as → best_model.pkl
+2026-05-20 20:48:40 | INFO     | scripts.train_models      | ==================================================
+2026-05-20 20:48:41 | INFO     | scripts.train_models      | Comparison chart saved to → E:\University\6th semester\Introduction to datasceince\ids project\charts\model_comparison.png
+2026-05-20 20:48:42 | INFO     | scripts.train_models      | Confusion matrices saved to → E:\University\6th semester\Introduction to datasceince\ids project\charts\confusion_matrices.png
+2026-05-20 20:48:42 | INFO     | scripts.train_models      | PHASE 6 — Model Training & Evaluation Complete ✓
+2026-05-20 20:48:42 | INFO     | main_pipeline             | ✔ COMPLETED: Phase 5 & 6: Model Training & Evaluation (in 29.14 seconds)
+2026-05-20 20:48:42 | INFO     | main_pipeline             | 
+================================================================================
+2026-05-20 20:48:42 | INFO     | main_pipeline             | 🎉 PIPELINE EXECUTION SUCCESSFUL AND COMPLETE!
+2026-05-20 20:48:42 | INFO     | main_pipeline             | ================================================================================
+2026-05-20 20:48:42 | INFO     | main_pipeline             | Total Execution Time: 1.08 minute(s) (64.75 seconds)
+2026-05-20 20:48:42 | INFO     | main_pipeline             | 
+Execution Breakdown:
+2026-05-20 20:48:42 | INFO     | main_pipeline             |   - Phase 1: Dataset Extraction                   :    9.77 seconds
+2026-05-20 20:48:42 | INFO     | main_pipeline             |   - Phase 2: Data Preprocessing & Cleaning        :    6.93 seconds
+2026-05-20 20:48:42 | INFO     | main_pipeline             |   - Phase 3: Label Ingestion & Excel Conversion   :   15.85 seconds
+2026-05-20 20:48:42 | INFO     | main_pipeline             |   - Phase 4: Exploratory Data Analysis (EDA)      :    3.05 seconds
+2026-05-20 20:48:42 | INFO     | main_pipeline             |   - Phase 5 & 6: Model Training & Evaluation      :   29.14 seconds
+2026-05-20 20:48:42 | INFO     | main_pipeline             | ================================================================================
+2026-05-20 20:50:52 | INFO     | scripts.clean_data        | Downloading NLTK resource: wordnet
+2026-05-20 20:50:52 | INFO     | scripts.clean_data        | Downloading NLTK resource: omw-1.4
+2026-05-20 20:55:34 | INFO     | __main__                  | Downloading NLTK resource: wordnet
+2026-05-20 20:57:33 | INFO     | __main__                  | Downloading NLTK resource: omw-1.4
+2026-05-20 20:57:34 | INFO     | __main__                  | ======================================================================
+2026-05-20 20:57:34 | INFO     | __main__                  | PHASE 2 — Data Preprocessing & Cleaning Started
+2026-05-20 20:57:34 | INFO     | __main__                  | ======================================================================
+2026-05-20 20:57:34 | INFO     | __main__                  | Loaded 16561 raw reviews
+2026-05-20 20:57:34 | INFO     | __main__                  | After removing nulls/empty: 16561 reviews
+2026-05-20 20:57:34 | INFO     | __main__                  | Removed 8084 duplicate reviews
+2026-05-20 20:57:34 | INFO     | __main__                  | Applying text cleaning pipeline …
+2026-05-20 20:57:41 | INFO     | __main__                  | Dropped 776 reviews (too short after cleaning)
+2026-05-20 20:57:42 | INFO     | __main__                  | Cleaned reviews saved → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_data\cleaned_reviews.csv
+2026-05-20 20:57:42 | INFO     | __main__                  | Cleaned reviews saved to root → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_reviews.csv
+2026-05-20 20:57:42 | INFO     | __main__                  | Final dataset: 7701 reviews (removed 8860 total)
+2026-05-20 20:57:42 | INFO     | __main__                  | PHASE 2 — Preprocessing & Cleaning Complete ✓
+2026-05-20 20:58:32 | INFO     | __main__                  | ======================================================================
+2026-05-20 20:58:32 | INFO     | __main__                  | PHASE 3 — Convert to Excel / CSV with Sentiment Labels
+2026-05-20 20:58:32 | INFO     | __main__                  | ======================================================================
+2026-05-20 20:58:32 | INFO     | __main__                  | Loaded cleaned reviews: 7701 rows
+2026-05-20 20:58:32 | INFO     | __main__                  | Applying VADER sentiment labeling …
+2026-05-20 20:58:38 | INFO     | __main__                  | CSV saved → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_data\telecom_reviews.csv and E:\University\6th semester\Introduction to datasceince\ids project\telecom_reviews.csv
+2026-05-20 20:58:43 | INFO     | __main__                  | XLSX saved → E:\University\6th semester\Introduction to datasceince\ids project\cleaned_data\telecom_reviews.xlsx and E:\University\6th semester\Introduction to datasceince\ids project\telecom_reviews.xlsx
+2026-05-20 20:58:43 | INFO     | __main__                  | Sentiment Distribution:
+2026-05-20 20:58:43 | INFO     | __main__                  |     Positive:   4075  (52.9%)
+2026-05-20 20:58:43 | INFO     | __main__                  |     Negative:   2060  (26.7%)
+2026-05-20 20:58:43 | INFO     | __main__                  |      Neutral:   1566  (20.3%)
+2026-05-20 20:58:43 | INFO     | __main__                  | PHASE 3 — Conversion Complete ✓
+2026-05-20 20:59:23 | INFO     | __main__                  | ======================================================================
+2026-05-20 20:59:23 | INFO     | __main__                  | PHASE 6 — Model Training & Evaluation Started
+2026-05-20 20:59:23 | INFO     | __main__                  | ======================================================================
+2026-05-20 20:59:23 | INFO     | scripts.feature_engineering | ======================================================================
+2026-05-20 20:59:23 | INFO     | scripts.feature_engineering | PHASE 5 — Feature Engineering Started
+2026-05-20 20:59:23 | INFO     | scripts.feature_engineering | ======================================================================
+2026-05-20 20:59:23 | INFO     | scripts.feature_engineering | Label classes: ['Negative', 'Neutral', 'Positive']
+2026-05-20 20:59:24 | INFO     | scripts.feature_engineering | TF-IDF: 7701 x 5000
+2026-05-20 20:59:24 | INFO     | scripts.feature_engineering | BoW: 7701 x 5000
+2026-05-20 20:59:24 | INFO     | scripts.feature_engineering | Train: 6160, Test: 1541
+2026-05-20 20:59:25 | INFO     | scripts.feature_engineering | PHASE 5 — Feature Engineering Complete ✓
+2026-05-20 20:59:25 | INFO     | __main__                  | Training Logistic Regression using TF-IDF features...
+2026-05-20 20:59:25 | INFO     | __main__                  |   Accuracy : 0.8397
+2026-05-20 20:59:25 | INFO     | __main__                  |   Precision: 0.8393
+2026-05-20 20:59:25 | INFO     | __main__                  |   Recall   : 0.8397
+2026-05-20 20:59:25 | INFO     | __main__                  |   F1-Score : 0.8385
+2026-05-20 20:59:25 | INFO     | __main__                  | Training Naive Bayes using TF-IDF features...
+2026-05-20 20:59:25 | INFO     | __main__                  |   Accuracy : 0.7378
+2026-05-20 20:59:25 | INFO     | __main__                  |   Precision: 0.7300
+2026-05-20 20:59:25 | INFO     | __main__                  |   Recall   : 0.7378
+2026-05-20 20:59:25 | INFO     | __main__                  |   F1-Score : 0.7219
+2026-05-20 20:59:25 | INFO     | __main__                  | Training Random Forest using TF-IDF features...
+2026-05-20 20:59:37 | INFO     | __main__                  |   Accuracy : 0.8527
+2026-05-20 20:59:37 | INFO     | __main__                  |   Precision: 0.8544
+2026-05-20 20:59:37 | INFO     | __main__                  |   Recall   : 0.8527
+2026-05-20 20:59:37 | INFO     | __main__                  |   F1-Score : 0.8524
+2026-05-20 20:59:37 | INFO     | __main__                  | Training Logistic Regression using BoW features...
+2026-05-20 20:59:37 | INFO     | __main__                  |   Accuracy : 0.8514
+2026-05-20 20:59:37 | INFO     | __main__                  |   Precision: 0.8534
+2026-05-20 20:59:37 | INFO     | __main__                  |   Recall   : 0.8514
+2026-05-20 20:59:37 | INFO     | __main__                  |   F1-Score : 0.8505
+2026-05-20 20:59:37 | INFO     | __main__                  | Training Naive Bayes using BoW features...
+2026-05-20 20:59:37 | INFO     | __main__                  |   Accuracy : 0.7599
+2026-05-20 20:59:37 | INFO     | __main__                  |   Precision: 0.7542
+2026-05-20 20:59:37 | INFO     | __main__                  |   Recall   : 0.7599
+2026-05-20 20:59:37 | INFO     | __main__                  |   F1-Score : 0.7548
+2026-05-20 20:59:37 | INFO     | __main__                  | Training Random Forest using BoW features...
+2026-05-20 20:59:50 | INFO     | __main__                  |   Accuracy : 0.8514
+2026-05-20 20:59:50 | INFO     | __main__                  |   Precision: 0.8584
+2026-05-20 20:59:50 | INFO     | __main__                  |   Recall   : 0.8514
+2026-05-20 20:59:50 | INFO     | __main__                  |   F1-Score : 0.8516
+2026-05-20 20:59:50 | INFO     | __main__                  | 
+=================================================================
+2026-05-20 20:59:50 | INFO     | __main__                  |                ALGORITHM COMPARISON TABLE
+2026-05-20 20:59:50 | INFO     | __main__                  | =================================================================
+2026-05-20 20:59:50 | INFO     | __main__                  |          model_name feature_type  accuracy  precision   recall  f1_score
+Logistic Regression       TF-IDF  0.839714   0.839327 0.839714  0.838505
+        Naive Bayes       TF-IDF  0.737833   0.729957 0.737833  0.721936
+      Random Forest       TF-IDF  0.852693   0.854415 0.852693  0.852373
+Logistic Regression          BoW  0.851395   0.853410 0.851395  0.850511
+        Naive Bayes          BoW  0.759896   0.754245 0.759896  0.754849
+      Random Forest          BoW  0.851395   0.858381 0.851395  0.851560
+2026-05-20 20:59:50 | INFO     | __main__                  | =================================================================
+2026-05-20 20:59:50 | INFO     | __main__                  | Saved Logistic Regression (TF-IDF) → logistic_regression_tf-idf.pkl
+2026-05-20 20:59:50 | INFO     | __main__                  | Saved Naive Bayes (TF-IDF) → naive_bayes_tf-idf.pkl
+2026-05-20 20:59:51 | INFO     | __main__                  | Saved Random Forest (TF-IDF) → random_forest_tf-idf.pkl
+2026-05-20 20:59:51 | INFO     | __main__                  | Saved Logistic Regression (BoW) → logistic_regression_bow.pkl
+2026-05-20 20:59:51 | INFO     | __main__                  | Saved Naive Bayes (BoW) → naive_bayes_bow.pkl
+2026-05-20 20:59:51 | INFO     | __main__                  | Saved Random Forest (BoW) → random_forest_bow.pkl
+2026-05-20 20:59:51 | INFO     | __main__                  | 
+==================================================
+2026-05-20 20:59:51 | INFO     | __main__                  | 🏆 OVERALL BEST PERFORMING MODEL: Random Forest (TF-IDF)
+2026-05-20 20:59:51 | INFO     | __main__                  | Accuracy : 0.8527
+2026-05-20 20:59:51 | INFO     | __main__                  | F1-Score : 0.8524
+2026-05-20 20:59:51 | INFO     | __main__                  | Saved as → best_model.pkl
+2026-05-20 20:59:51 | INFO     | __main__                  | ==================================================
+2026-05-20 20:59:52 | INFO     | __main__                  | Comparison chart saved to → E:\University\6th semester\Introduction to datasceince\ids project\charts\model_comparison.png
+2026-05-20 20:59:53 | INFO     | __main__                  | Confusion matrices saved to → E:\University\6th semester\Introduction to datasceince\ids project\charts\confusion_matrices.png
+2026-05-20 20:59:53 | INFO     | __main__                  | PHASE 6 — Model Training & Evaluation Complete ✓
+2026-05-20 21:03:50 | INFO     | scripts.clean_data        | Downloading NLTK resource: wordnet
+2026-05-20 21:03:51 | INFO     | scripts.clean_data        | Downloading NLTK resource: omw-1.4
+2026-05-20 21:04:43 | INFO     | scripts.predict           | Loaded model from disk: best_model.pkl
+2026-05-20 21:06:08 | INFO     | scripts.predict           | Loaded model from disk: logistic_regression_tf-idf.pkl
+2026-05-20 21:06:21 | INFO     | scripts.predict           | Loaded model from disk: random_forest_tf-idf.pkl
+2026-05-20 21:06:25 | INFO     | scripts.predict           | Loaded model from disk: naive_bayes_tf-idf.pkl
